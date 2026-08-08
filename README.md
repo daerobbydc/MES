@@ -176,18 +176,6 @@ npx prisma db push
 
 ---
 
-## 👥 Pengguna Demo bawaan (`seed`)
-
-| Email | Password | Role |
-| --- | --- | --- |
-| `admin@mes.com` | `admin123` | `ADMIN` (Superuser) |
-| `supervisor@mes.com` | `supervisor123` | `SUPERVISOR` |
-| `planner@mes.com` | `planner123` | `PLANNER` |
-| `quality@mes.com` | `quality123` | `QUALITY_INSPECTOR` |
-| `operator@mes.com` | `operator123` | `OPERATOR` |
-
----
-
 ## 📝 Lisensi
 
 Proyek ini dikembangkan di bawah lisensi **MIT License**.
