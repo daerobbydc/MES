@@ -3,6 +3,8 @@ import { db } from "@/lib/db";
 import { requireAuth } from "@/lib/auth";
 import { successResponse, errorResponse } from "@/lib/utils";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(request: NextRequest) {
   try {
     await requireAuth();

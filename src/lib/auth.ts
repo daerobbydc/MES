@@ -61,7 +61,14 @@ export async function getSession(): Promise<JWTPayload | null> {
       const payload = await verifyToken(token);
       if (payload) return payload;
     }
-  } catch (e) {
+  } catch (e: any) {
+    if (
+      e?.digest === "DYNAMIC_SERVER_USAGE" ||
+      e?.name === "DynamicServerError" ||
+      e?.message?.includes("DYNAMIC_SERVER_USAGE")
+    ) {
+      throw e;
+    }
     console.error("Auth session error:", e);
   }
 

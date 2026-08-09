@@ -3,6 +3,8 @@ import { requireAuth } from "@/lib/auth";
 import { successResponse, errorResponse } from "@/lib/utils";
 import { CostingService } from "@/services";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(request: NextRequest) {
   try {
     await requireAuth();
